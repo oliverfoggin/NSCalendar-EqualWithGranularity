@@ -35,8 +35,7 @@
     return componentFlags;
 }
 
-- (NSDate *)ojf_dateFromDate:(NSDate *)date
-      withComponentFlags:(int)componentFlags
+- (NSDate *)ojf_dateFromDate:(NSDate *)date withComponentFlags:(int)componentFlags
 {
     NSDateComponents *components = [self components:componentFlags fromDate:date];
     
