@@ -10,21 +10,21 @@
 
 @implementation NSCalendar (equalWithGranularity)
 
-- (BOOL)isDate:(NSDate *)date1 equalToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity
+- (BOOL)ojf_isDate:(NSDate *)date1 equalToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity
 {
     if ([date1 isEqualToDate:date2]) {
         return YES;
     }
     
-    int componentFlags = [self componentFlagsWithGranularity:granularity];
+    int componentFlags = [self ojf_componentFlagsWithGranularity:granularity];
     
-    date1 = [self dateFromDate:date1 withComponentFlags:componentFlags];
-    date2 = [self dateFromDate:date2 withComponentFlags:componentFlags];
+    date1 = [self ojf_dateFromDate:date1 withComponentFlags:componentFlags];
+    date2 = [self ojf_dateFromDate:date2 withComponentFlags:componentFlags];
     
     return [date1 isEqualToDate:date2];
 }
 
-- (int)componentFlagsWithGranularity:(NSCalendarUnit)granularity
+- (int)ojf_componentFlagsWithGranularity:(NSCalendarUnit)granularity
 {
     int componentFlags = 0;
     
@@ -35,7 +35,7 @@
     return componentFlags;
 }
 
-- (NSDate *)dateFromDate:(NSDate *)date
+- (NSDate *)ojf_dateFromDate:(NSDate *)date
       withComponentFlags:(int)componentFlags
 {
     NSDateComponents *components = [self components:componentFlags fromDate:date];
