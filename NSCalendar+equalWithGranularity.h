@@ -10,6 +10,6 @@
 
 @interface NSCalendar (equalWithGranularity)
 
-- (BOOL)isDate:(NSDate *)date1 equalToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity;
+- (BOOL)ojf_isDate:(NSDate *)date1 equalToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity;
 
 @end
