@@ -6,6 +6,6 @@ Pod::Spec.new do |s|
   s.license      = 'Apache License, Version 2.0'
   s.author       = "ojfoggin"
   s.source       = { :git => "https://github.com/ojfoggin/NSCalendar-EqualWithGranularity.git", 
-                     :commit => "b801c1e8f67ea18d810c4956f146b911159cb54a" }
+                     :commit => "857cf5151541ab7b021bcbe499cb75ce2a92eac8" }
   s.source_files  = 'NSCalendar+equalWithGranularity.{h,m}'
 end
