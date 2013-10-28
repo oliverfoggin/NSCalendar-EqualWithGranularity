@@ -12,4 +12,6 @@
 
 - (BOOL)ojf_isDate:(NSDate *)date1 equalToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity;
 
+- (NSComparisonResult)ojf_compareDate:(NSDate *)date1 toDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity;
+
 @end
