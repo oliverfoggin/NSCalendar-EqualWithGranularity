@@ -16,7 +16,7 @@
         return YES;
     }
     
-    int componentFlags = [self ojf_componentFlagsWithGranularity:granularity];
+    int componentFlags = granulatiry * 2 - 2;
     
     date1 = [self ojf_dateFromDate:date1 withComponentFlags:componentFlags];
     date2 = [self ojf_dateFromDate:date2 withComponentFlags:componentFlags];
@@ -24,15 +24,14 @@
     return [date1 isEqualToDate:date2];
 }
 
-- (int)ojf_componentFlagsWithGranularity:(NSCalendarUnit)granularity
+- (NSComparisonResult)ojf_compareDate:(NSDate *)date1 toDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity
 {
-    int componentFlags = 0;
+    int componentFlags = granulatiry * 2 - 2;
     
-    for (int i = 1<<1 ; i <= granularity ; i = i<<1) {
-        componentFlags = componentFlags | i;
-    }
+    date1 = [self ojf_dateFromDate:date1 withComponentFlags:componentFlags];
+    date2 = [self ojf_dateFromDate:date2 withComponentFlags:componentFlags];
     
-    return componentFlags;
+    return [date1 compare:date2];
 }
 
 - (NSDate *)ojf_dateFromDate:(NSDate *)date withComponentFlags:(int)componentFlags
