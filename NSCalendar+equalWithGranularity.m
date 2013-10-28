@@ -16,7 +16,7 @@
         return YES;
     }
     
-    int componentFlags = granulatiry * 2 - 2;
+    int componentFlags = granularity * 2 - 2;
     
     date1 = [self ojf_dateFromDate:date1 withComponentFlags:componentFlags];
     date2 = [self ojf_dateFromDate:date2 withComponentFlags:componentFlags];
@@ -26,7 +26,7 @@
 
 - (NSComparisonResult)ojf_compareDate:(NSDate *)date1 toDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity
 {
-    int componentFlags = granulatiry * 2 - 2;
+    int componentFlags = granularity * 2 - 2;
     
     date1 = [self ojf_dateFromDate:date1 withComponentFlags:componentFlags];
     date2 = [self ojf_dateFromDate:date2 withComponentFlags:componentFlags];
