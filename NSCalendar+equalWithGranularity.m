@@ -10,6 +10,18 @@
 
 @implementation NSCalendar (equalWithGranularity)
 
+- (BOOL)ojf_isDate:(NSDate *)date1 equalToDate:(NSDate *)date2 withComponents:(NSCalendarUnit)componentFlags
+{
+    if ([date1 isEqualToDate:date2]) {
+        return YES;
+    }
+    
+    date1 = [self ojf_dateFromDate:date1 withComponentFlags:componentFlags];
+    date2 = [self ojf_dateFromDate:date2 withComponentFlags:componentFlags];
+    
+    return [date1 isEqualToDate:date2];
+}
+
 - (BOOL)ojf_isDate:(NSDate *)date1 equalToDate:(NSDate *)date2 withGranularity:(NSCalendarUnit)granularity
 {
     if ([date1 isEqualToDate:date2]) {
